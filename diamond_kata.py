@@ -1,3 +1,8 @@
+def _build_row(letter, leading_space, inner_space):
+    if letter == "A":
+        return " " * leading_space + letter
+    return " " * leading_space + letter + " " * inner_space + letter   
+
 def diamond_kata(given_letter: str):
     if not given_letter.isalpha():
         return
@@ -9,7 +14,7 @@ def diamond_kata(given_letter: str):
     value_given_letter = ord(given_letter)
     diff = value_given_letter - value_A
     
-    inner_space = 0
+    inner_space = -1
     leading_space = diff
 
     
@@ -33,10 +38,7 @@ def diamond_kata(given_letter: str):
         inner_space -= 2
         leading_space +=1
         
-def _build_row(letter, leading_space, inner_space):
-    if letter == "A":
-        return " " * leading_space + letter + " " * leading_space
-    return " " * leading_space + letter + " " * inner_space + letter + " " * leading_space   
+
         
         
 
