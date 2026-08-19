@@ -45,6 +45,7 @@ def diamond_kata(given_letter: str):
         
 
 
+diamond_kata("D")
 
-print(diamond_kata("D"))
+diamond_kata("C")
     
