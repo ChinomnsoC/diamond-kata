@@ -14,10 +14,7 @@ def diamond_kata(given_letter: str):
 
     
     for i in range(diff):
-        if letter == "A":
-            print((" " * leading_space )+ letter + (" " * leading_space))
-        else:
-            print((" " * leading_space )+ letter + (" " * inner_space) + letter + (" " * leading_space))
+        print(_build_row(letter, leading_space, inner_space))
         
         value_of_letter = ord(letter)
         
@@ -28,12 +25,7 @@ def diamond_kata(given_letter: str):
             leading_space -=1
     
     for i in range(diff + 1):
-        if letter == "A":
-            print((" " * leading_space )+ letter + (" " * leading_space))
-            return
-        
-        
-        print((" " * leading_space )+ letter + (" " * inner_space) + letter + (" " * leading_space))
+        print(_build_row(letter, leading_space, inner_space))
         
         value_of_letter = ord(letter)
         value_of_next_letter = value_of_letter - 1
@@ -41,6 +33,10 @@ def diamond_kata(given_letter: str):
         inner_space -= 2
         leading_space +=1
         
+def _build_row(letter, leading_space, inner_space):
+    if letter == "A":
+        return " " * leading_space + letter + " " * leading_space
+    return " " * leading_space + letter + " " * inner_space + letter + " " * leading_space   
         
         
 
