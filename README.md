@@ -2,7 +2,7 @@
 
 ## My Approach
 
-I worked out the formular on paper before writing any code. See /notes for my working.
+I worked out the formular on paper before writing any code. See `/notes`for my working.
 
 - Leading spaces start at `diff` (distance from A to any given letter) and decease by 1 each row
 - Inner spaces start at 1 for row B and increase by 2 each row.
